@@ -1,0 +1,88 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>calulater</title>
+      <link rel="stylesheet" href="calulater.css">
+  </head>
+  <body>
+      <div id="man_container">
+        <div id="hello" class="border">hello
+          <input type="text" id="display" placeholder="0" readonly>
+        </div>
+        <div id="one" class="border"><h3>1</h3></div>
+        <div id="two" class="border"><h3>2</h3></div>
+        <div id="three" class="border"><h3>3</h3></div>
+      
+        <div id="sum" class="border"><h3>+</h3></div>
+        <div id="four" class="border"><h3>4</h3></div>
+        <div id="five" class="border"><h3>5</h3></div>
+        <div id="six" class="border"><h3>6</h3></div>
+
+        <div id="sub" class="border"><h2>-</h2></div>
+        <div id="seven" class="border"><h3>7</h3></div>
+        <div id="eight" class="border"><h3>8</h3></div>
+        <div id="nine" class="border"><h3>9</h3></div>
+
+        <div id="mult" class="border"><h2>*</h2></div>
+        <div id="zero" class="border"><h3>0</h3></div>
+        <div id="zerozero" class="border"><h2>00</h2></div>
+        <div id="divs" class="border"><h2>/</h2></div>
+        <div id="remove" class="border">AC<h2></h2></div>
+
+        <div id="mod" class="border"><h2>%</h2></div>
+        <div id="dote" class="border"><h3>.</h3></div>
+        <div id="del" class="border"><h2>del</h2></div>
+        <div id="aqul" class="border"><h2>=</h2></div>
+        
+        
+
+
+      </div> 
+      
+      <script>
+        const display = document.getElementById("display");
+
+        function add(value) {
+          const detele1=document.getElementById("del")
+          if(value==detele1)
+        {
+          display.value=display.value.slice(0,length-1)
+        }
+        else{
+          console.log();
+              string = display.value
+              console.log(string);
+              
+            display.value+=value;
+          }
+        }
+        function clean() {
+            display.value = "";
+        }
+        function dis() {
+                display.value = eval(display.value);
+        }
+        const buttons = {
+            one: "1", two: "2", three: "3", four: "4",
+            five: "5", six: "6", seven: "7", eight: "8", nine: "9",
+            zero: "0", sum: "+", sub: "-", mult: "*", divs: "/",
+            mod :"%", dote:".", del: document.getElementById("del"),  zerozero: "00"
+        };
+        for (let id in buttons) {
+            document.getElementById(id).addEventListener("click", () => add(buttons[id]));
+        }
+        document.getElementById("aqul").addEventListener("click", dis);
+        document.getElementById("remove").addEventListener("click", clean);
+
+        // const del=document.getElementById("del").addEventListener("click", function(){
+        //  const length= display.value.length;
+        //      display.value=display.value.slice(0,length-1)
+         
+         
+         
+        // })
+    </script>
+  </body>
+  </html>
