@@ -4,7 +4,7 @@
 #man_container{
     height: 500px;
     width: 500px;
-    border: 3px solid yellow;
+    border: 3px solid red;
    
     display: grid;
     box-sizing: border-box;
